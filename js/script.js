@@ -1,23 +1,9 @@
 window.addEventListener("load", () => {
-
-    const content = document.getElementById("content");
     const star = document.getElementById("star")
     const counter = document.getElementById("counter");
     const point = document.getElementsByClassName("point");
     const nav = document.getElementById("nav-placeholder");
 
-
-    setTimeout(() => {
-
-        setTimeout(() => {
-            loader.style.display = "none";
-            content.style.display = "block";
-            star.style.display = "block";
-            counter.style.display = "block";
-            nav.style.display = "block";
-
-        }, 300);
-    }, 300); 
 
     
     let count = parseInt(localStorage.getItem("points")) || 0;
