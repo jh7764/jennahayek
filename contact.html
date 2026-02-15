@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+       
+        <script src = "js/script.js" defer></script>
+        <style>
+            p,a{
+                font-family: "Dongle";
+                font-size: 30px;
+                cursor: default;
+                line-height: 1.0;
+
+            }
+
+            #counter{
+                position: absolute;
+                top: 20px;
+                right: 100px;          
+                font-weight: bold;
+                font-size: 35px;
+                font-family: "Dokdo";
+                z-index: 1000;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!--Point Counter -->
+        <div class="count" id="counter">0</div>
+
+        <!--Navigation Menu-->
+        <div id="nav-placeholder"></div>
+        <script>
+            fetch('nav.html')
+                .then(response => {
+                    if (!response.ok){
+                        throw new Error('Failed to load nav: ${response.status}');
+                    }
+                    return response.text();
+                })
+                .then(navHTML =>{
+                    document.getElementById('nav-placeholder').innerHTML = navHTML;
+                })
+                .catch(error =>{
+                    console.error('Error loading nav: ', error)
+                });
+        </script>
+        <p>
+            Gmail: <a href="mailto:jennahayek2007@gmail.com">jennahayek2007@gmail.com</a> <br>
+            Outlook: <a href="mailto:jenna.hayek001@umb.edu">jenna.hayek001@umb.edu</a> 
+        </p>
+    </body>
+</html>
