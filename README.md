@@ -12,8 +12,10 @@ My personal website, built for fun and hosted on GitHub Pages. A little about me
 - **HTML**
 - **CSS** (Vanilla)
 - **JavaScript**
-- **GitHub Pages** — free hosting straight from the repo
+- **GitHub Pages**
 
 ## Live Site
 
 👉 [jh7764.github.io](http://jh7764.github.io/)
+
+
